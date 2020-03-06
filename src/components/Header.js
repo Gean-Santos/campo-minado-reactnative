@@ -8,7 +8,11 @@ import Flag from './Flag';
 
 export default props => {
   return (
-    <View style={styles.container}>
+    <View style={styles.content}>
+      <View>
+        <Text style={styles.label}>Campo Minado</Text>
+      </View>
+      <View style={styles.container}>
       <View style={styles.flagContainer}>
         <TouchableOpacity onPress={props.onFlagPress}
           style={styles.flagButton}>
@@ -20,10 +24,23 @@ export default props => {
         <Text style={styles.buttonLabel}>Novo Jogo</Text>
       </TouchableOpacity>
     </View>
+    </View>
+    
   );
 };
 
 const styles = StyleSheet.create({
+  content:{
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+  },
+  label:{
+    color: '#0B1F4E',
+    fontWeight: 'bold',
+    fontSize: 18
+  },
   container: {
     flex: 1,
     flexDirection: 'row',
@@ -32,6 +49,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     paddingTop: 20,
     paddingHorizontal: 20,
+    width: '100%'
   },
   flagContainer: {
     flexDirection: 'row',
@@ -47,7 +65,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   button: {
-    backgroundColor: '#999',
+    backgroundColor: '#4F6598',
     padding: 5,
   },
   buttonLabel: {
